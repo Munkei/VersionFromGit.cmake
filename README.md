@@ -1,5 +1,12 @@
-VersionFromGit.cmake
-====================
+# VersionFromGit.cmake #
+
+> **DEPRECATED!**
+>
+> VersionFromGit is now part of
+> [`munkei-cmake`](https://github.com/Munkei/munkei-cmake). This repository will
+> *not* be updated.
+
+---
 
 Get a [CMake](http://www.cmake.org/) project's version number from the latest
 [Git](http://git-scm.com) tag.
@@ -31,55 +38,54 @@ Gets the version information from Git.
 
 #### Options ####
 
-* `GIT_EXECUTABLE` *(optional)*
+*   `GIT_EXECUTABLE` *(optional)*
 
     The name of, or full path to, Git. If not defined it will be found using
     `find_package( Git )`.
 
-* `INCLUDE_HASH` *(optional)*
+*   `INCLUDE_HASH` *(optional)*
 
     Whether to include the current Git hash as part of the metadata, *if* the
     current HEAD is *not* at a tag, à la `git describe`.
 
     Default: `ON`
 
-* `LOG` *(optional)*
+*   `LOG` *(optional)*
 
     Whether to log the different parts obtained from Git.
 
     Default: `OFF`
 
-* `TIMESTAMP` *(optional)*
+*   `TIMESTAMP` *(optional)*
 
     A timestamp format (see CMake’s `string( TIMESTAMP ... )`), that, if
     defined, will be added as a part of the metadata.
 
 #### Variables Set ####
 
-* `GIT_TAG`
+*   `GIT_TAG`
 
     The current (latest) Git tag.
 
-* `SEMVER`
+*   `SEMVER`
 
     The full semantic version, including identifiers and metadata.
 
-* `VERSION`
+*   `VERSION`
 
     The full three-part version, suitable for use with `project()`.
 
-* `VERSION_MAJOR`
+*   `VERSION_MAJOR`
 
     The major version number.
 
-* `VERSION_MINOR`
+*   `VERSION_MINOR`
 
     The minor version number.
 
-* `VERSION_PATCH`
+*   `VERSION_PATCH`
 
     The patch version number.
-
 
 ### Example ###
 
@@ -107,9 +113,8 @@ set( CPACK_PACKAGE_FILE_NAME MyProject-v${SEMVER} )
 
 ## Requirements ##
 
-* CMake v3.0.0 or later
-
-* Git
+*   CMake v3.0.0 or later
+*   Git
 
 ## License ##
 

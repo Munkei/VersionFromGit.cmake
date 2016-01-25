@@ -34,6 +34,10 @@
 
 cmake_minimum_required( VERSION 3.0.0 )
 
+message( WARNING
+  "VersionFromGit is now part of munkei-cmake. This version is deprecated. You should get the new module from <https://github.com/Munkei/munkei-cmake>."
+)
+
 include( CMakeParseArguments )
 
 function( version_from_git )
